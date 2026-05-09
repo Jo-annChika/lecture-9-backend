@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Backend Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f5f5f5;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 8px 4px 8px 0;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover { background: #357abd; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .card.visible { display: block; }
+    .card p { margin: 6px 0; color: #444; }
+    .label { font-weight: bold; color: #222; }
+    #loading { color: #888; font-style: italic; display: none; }
+    #error { color: #cc0000; display: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Backend API Test</h1>
+
+  <button onclick="getMessage()">Get Message</button>
+  <button onclick="getStudent()">Get Student</button>
+
+  <p id="loading">Loading...</p>
+  <p id="error"></p>
+
+  <div class="card" id="message-card">
+    <p><span class="label">Message:</span> <span id="out-message"></span></p>
+    <p><span class="label">Course:</span>  <span id="out-course"></span></p>
+    <p><span class="label">Year:</span>    <span id="out-year"></span></p>
+    <p><span class="label">Time:</span>    <span id="out-time"></span></p>
+  </div>
+
+  <div class="card" id="student-card">
+    <p><span class="label">Name:</span> <span id="out-name"></span></p>
+    <p><span class="label">Role:</span> <span id="out-role"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
